@@ -1,0 +1,66 @@
+#!/usr/bin/env php
+<?php
+
+require_once(dirname(__FILE__) . '/lessons/functions.php');
+
+if (!isset($argv[1])) {
+  die("Second parameter required - lesson name\n");
+}
+
+global $LESSON_PATH;
+$LESSON = $argv[1];
+$LESSON_PATH = "lessons/$argv[1]";
+
+if (!is_dir($LESSON_PATH)) {
+  die("Cannot find the directory $LESSON_PATH\n");
+}
+
+$langs = array('en', 'zh-cn');
+
+function my_file_exists($fname) {
+  if (!file_exists($fname)) {
+    echo "File $fname does not exists...";
+    return FALSE;
+  }
+  return TRUE;
+}
+
+foreach ($langs as $l) {
+  $mp3_file = $LESSON_PATH . '/' . $l . '.mp3';
+  if (!my_file_exists($mp3_file)) continue;
+  $txt_file = $LESSON_PATH . '/' . $l . '.txt';
+  if (!my_file_exists($txt_file)) continue;
+
+  $mp3_len = `mp3info -p "%S" $mp3_file`;
+  echo "$mp3_file length = $mp3_len \n";
+
+  `eyeD3 -t "$LESSON ($l)" $mp3_file`;
+  $lines = file($txt_file);
+
+  $sentences = array();
+  $slen = 0;
+  foreach($lines as $ln){
+    if (!trim($ln)) continue;
+    $sbuf = parse_sentences($ln);
+    foreach ($sbuf as $snt) {
+      $sentences[] = $snt;
+    }
+  }
+
+  $scount = count($sentences);
+  $slen = strlen(implode('', $sentences));
+  echo 'Found ' . $scount . ' sentences, ' . $slen . " chars\n";
+
+  $out = "";
+  $sec = 0;
+  foreach ($sentences as $sentence) {
+    // here generate line
+    $h = sprintf("%'.02d:",intval($sec / (60 * 60)));
+    $m = sprintf("%'.02d:",intval($sec / 60));
+    $s = sprintf("%'.02d.00",intval($sec % 60));
+    $out .= "[$m$s]$sentence\n";
+    $sec += $mp3_len * strlen($sentence) / $slen;
+  }
+  $lrc_file = $LESSON_PATH . '/' . $l . '.lrc';
+  file_put_contents($lrc_file, $out);
+}

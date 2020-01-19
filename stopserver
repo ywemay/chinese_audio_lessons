@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+
+$ini = parse_ini_file(__DIR__ . '/config.ini');
+
+$port = $ini['port'];
+
+$proclist = `lsof -i :$port`;
+
+preg_match_all("/^php +(\d+)/m", $proclist, $mt);
+
+if (!empty($mt[1])) {
+  foreach ($mt[1] as $pid) {
+    `kill $pid`;
+    echo "Found process is $pid... kill\n";
+  }
+}

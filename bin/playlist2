@@ -1,0 +1,24 @@
+#!/usr/bin/env php
+<?php
+define('DIR_PLAYLISTS', __DIR__ . '/m3u');
+if (!is_dir(DIR_PLAYLISTS)) mkdir(DIR_PLAYLISTS);
+
+$langs = array('en', 'zh-cn');
+
+foreach ($langs as $l) {
+  if (!is_dir(DIR_PLAYLISTS . '/' . $l)) mkdir(DIR_PLAYLISTS . '/' . $l);
+
+  $files = glob("lessons/*/$l.mp3");
+
+  $m3u_name = DIR_PLAYLISTS . '/' . $l . '/playlist-' . $l . '.m3u'; 
+  $mp3s = array();
+  foreach($files as $mp3src){
+    $name = basename(dirname($mp3src));
+    $mp3dst = DIR_PLAYLISTS . '/' . $l . '/' . $name . '_' . $l . '.mp3';
+    if (file_exists($mp3dst)) unlink($mp3dst);
+    copy($mp3src, $mp3dst);
+    $mp3s[] = basename($mp3dst);
+  }
+  file_put_contents($m3u_name, implode("\n", $mp3s));
+}
+

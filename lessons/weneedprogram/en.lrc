@@ -1,0 +1,50 @@
+[00:00.00]I want to write a computer program.
+[00:02.00] Actually,
+[00:03.00] it shall be a website.
+[00:05.00] A web site that acts like a computer program.
+[00:08.00]On the website users can create accounts.
+[00:11.00] Users can log in into the site.
+[00:13.00] Users shall be able to add their username,
+[00:17.00] email address,
+[00:18.00] phone number,
+[00:19.00] wechat.
+[00:19.00]Administrators shall be able to assign different roles to users.
+[00:24.00] We shall have customers,
+[00:26.00] salepersons,
+[00:27.00] warehouse keepers,
+[00:28.00] warehouse managers,
+[00:30.00] production managers,
+[00:32.00] secretary and bookkeepers.
+[00:34.00]Administrators shall be able to append new records,
+[00:37.00] edit records,
+[00:38.00] delete records,
+[00:40.00] cancel user accounts,
+[00:41.00] import records,
+[00:42.00] export records.
+[00:44.00]We will have an online product catalogue.
+[00:47.00] Product records can be created,
+[00:49.00] edited and deleted if necessary.
+[00:52.00]For each product we shall be able to create,
+[00:55.00] edit and delete if necessary the bill of materials.
+[00:59.00]We will have sale system.
+[01:01.00] We shall be able to create and edit sale orders.
+[01:04.00] We shall be able to delete the sale order if necessary.
+[01:08.00] Sale persons shall be in charche for the sale system.
+[01:12.00] Customers shall be able to place sale orders too.
+[01:16.00]We shall have purchase systems too.
+[01:19.00] Our company shall be able to register purchace orders we give to our suppliers.
+[01:25.00] We shall be able to track the receipts of the goods in warehouse.
+[01:30.00] We shall be able to track the payments related to purchase orders.
+[01:35.00]We shall have inventory system.
+[01:37.00] We shall register the ready goods that exit production line.
+[01:42.00] We shall track the deliveries made to our customers from our warehouses.
+[01:47.00]The inventory system shall be able to track raw materials too.
+[01:52.00] It shall track the intermediary products that occur during production process.
+[01:58.00]Of couse,
+[01:58.00] we shall have a nice reporting system.
+[02:01.00] We need reports of everything.
+[02:03.00] We need financial reports.
+[02:06.00] We need quantitative reports.
+[02:08.00] We need reports about company's efficiency.
+[02:11.00]So,
+[02:11.00] we need a very robust system.

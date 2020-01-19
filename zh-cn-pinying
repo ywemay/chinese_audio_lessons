@@ -1,0 +1,5 @@
+#!/bin/bash
+[ ! "$1" ] && echo "Specify lesson name" && exit
+LESSON_PATH="lessons/$1"
+[ ! -d "$LESSON_PATH" ] && "Cannot find directory $LESSON_PATH" && exit
+vim "$LESSON_PATH/zh-cn-pinying.txt"

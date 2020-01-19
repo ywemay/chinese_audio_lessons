@@ -1,0 +1,9 @@
+*.mp3
+*.webm
+*.m3u
+*.ogg
+*.jpg
+*.jpeg
+.pid
+m3u/
+phpd.log

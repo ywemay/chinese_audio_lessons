@@ -1,0 +1,24 @@
+I want to write a computer program. Actually, it shall be a website. A web site that acts like a computer program.
+
+On the website users can create accounts. Users can log in into the site. Users shall be able to add their username, email address, phone number, wechat.
+
+Administrators shall be able to assign different roles to users. We shall have customers, salepersons, warehouse keepers, warehouse managers, production managers, secretary and bookkeepers.
+
+Administrators shall be able to append new records, edit records, delete records, cancel user accounts, import records, export records.
+
+We will have an online product catalogue. Product records can be created, edited and deleted if necessary.
+
+For each product we shall be able to create, edit and delete if necessary the bill of materials.
+
+We will have sale system. We shall be able to create and edit sale orders. We shall be able to delete the sale order if necessary. Sale persons shall be in charche for the sale system. Customers shall be able to place sale orders too.
+
+We shall have purchase systems too. Our company shall be able to register purchace orders we give to our suppliers. We shall be able to track the receipts of the goods in warehouse. We shall be able to track the payments related to purchase orders.
+
+We shall have inventory system. We shall register the ready goods that exit production line. We shall track the deliveries made to our customers from our warehouses.
+
+The inventory system shall be able to track raw materials too. It shall track the intermediary products that occur during production process.
+
+Of couse, we shall have a nice reporting system. We need reports of everything. We need financial reports. We need quantitative reports. We need reports about company's efficiency.
+
+So, we need a very robust system.
+

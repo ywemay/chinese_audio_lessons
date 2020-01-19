@@ -1,0 +1,62 @@
+#!/usr/bin/env php
+<?php
+
+if (!isset($argv[1])) {
+  die("Second parameter required - lesson name\n");
+}
+
+global $LESSON_PATH;
+$LESSON_PATH = "lessons/$argv[1]";
+
+if (!is_dir($LESSON_PATH)) {
+  die("Cannot find the directory $LESSON_PATH\n");
+}
+
+function getplayer($l, $mode=''){
+  $mp3 = $l . ($mode == 'slow' ? '_slow' : '' ) . '.mp3';
+  $rz = '<div class="player player-' . $l . '"><audio controls>
+         <source src="' . $mp3 . '" type="audio/mpeg">
+         Your browser does not support the audio element.
+         </audio></div>' . "\n";
+  return $rz;
+}
+
+$out = "<html>\n<head>\n\t<title>$argv[1]</title>";
+$out .=  '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>';
+$en = file($LESSON_PATH . '/en.txt');
+$zh = file($LESSON_PATH . '/zh-cn.txt');
+$pinying = file($LESSON_PATH . '/zh-cn-pinying.txt');
+
+$out .= '<body>' . "\n";
+$out .= "<h1>English</h1>\n";
+$out .= implode("</br>", $en);
+
+$out .= getplayer('en');
+
+$out .= "<h1>Chinese</h1>\n";
+$out .= implode("</br>", $zh);
+
+$out .= getplayer('zh-cn');
+
+$out .= "<h1>Pinying</h1>\n";
+$out .= implode("</br>", $pinying);
+
+$out .= "<h1>Comninned</h1>\n";
+
+foreach($en as $nr=>$ln) {
+
+  if (!trim($ln)) {
+    $out .="<br /><br />";
+    continue;
+  }
+  $out .= $zh[$nr] . '<br />';
+  $out .= $pinying[$nr] . '<br />';
+  $out .= $ln . '<br />';
+}
+
+$out .= getplayer('zh-cn');
+$out .= getplayer('zh-cn', 'slow');
+$out .= "</body>\n";
+$out .= "</html>\n";
+
+file_put_contents($LESSON_PATH . '/index.html', $out);

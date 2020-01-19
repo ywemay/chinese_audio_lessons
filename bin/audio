@@ -1,0 +1,31 @@
+#!/bin/bash
+[ ! "$1" ] && echo "Param 1 shall be lesson key" && exit 1
+LESSON_PATH="lessons/$1"
+[ ! -d "$LESSON_PATH" ] && echo "Cannot find directory $LESSON_PATH" && exit 1
+cd "$LESSON_PATH"
+
+#for f in `find -name "*.txt"`
+for f in `ls *.txt`
+do
+  if [[ $f == "zh-cn-pinying.txt" ]] 
+  then
+    echo "Will not $f"
+  else
+    k="${f/.txt/}"
+    # Fast mode:
+    echo "Generate $k fast mode..."
+    if [ ! -f "$k.mp3" ]
+    then
+      gtts-cli.py -f "$f" -l "$k" -o "$k.mp3"
+    fi
+
+    echo "Generate $k slow mode..."
+    # Slow mode:
+    if [ ! -f "${k}_slow.mp3" ]
+    then
+      gtts-cli.py -f "$f" -l "$k" --slow -o "${k}_slow.mp3"
+    fi
+
+  fi
+done
+

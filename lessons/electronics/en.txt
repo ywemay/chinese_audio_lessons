@@ -1,0 +1,20 @@
+I like electronics.
+
+I like transistors. I like resistors, capacitors, diodes, coils, switches, microcircuits.
+
+Resistors are used to limit the electric current flow.
+Capacitors are used to store electric charge. Capacitors can be used to filter current fluctuations.
+Capacitors can be electrolitic with positive and negative wire.
+Capacitors can be of ceramic type.
+
+Diodes limit the current flow to one direction only.
+Diodes can be used to form a diode bridge.
+Diode bridge is used to transform alternating current into direct current. Diodes have 2 legs, 2 pins.
+
+Tranzistors and diodes are made of the similar material. Transistors have 3 pins: base, collector, emittor. Transistors are the basic components of today's electronics. Transistors work by amplifying the current.
+
+Microcircuits or microcontrollers are complex electronic parts containing microscopic parts. In their circuit can be found lots of tranzistors, rezistors, capacitors, diodes.
+
+Transformers are used to change the voltage of an alternative current circuit. For example: from 220 volt to 5 volt. Transformer usually has 2 coils. Each coil has different number of windings. Each coil may have different type of wire thickness.
+
+Light emitting diodes come in different colors: red, green, yellow, blue, white. Our diplays are based on light emitting diodes. If you look under the microscope at the computer monitor surface - you can see individual light emitting diodes.

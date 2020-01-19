@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+$ini = parse_ini_file(__DIR__ . '/config.ini');
+$port = isset($ini['port']) ? $ini['port'] : 9906;
+$host = isset($ini['host']) ? $ini['host'] : 'localhost';
+$SERVER_PATH = __DIR__;
+//`nohup php -S $host:$port -t "$SERVER_PATH" > phpd.log 2>&1 &`;
+`php -S $host:$port -t "$SERVER_PATH"`;
+`firefox http://$host:$port`;
+

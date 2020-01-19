@@ -1,0 +1,6 @@
+#!/bin/bash
+cd lessons
+ls */zh-cn.mp3 > zh-cn.m3u
+ls */zh-cn_slow.mp3 > zh-cn_slow.m3u
+ls */en.mp3 > en.m3u
+ls */en_slow.mp3 > en_slow.m3u

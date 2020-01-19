@@ -1,0 +1,6 @@
+#!/bin/bash
+[ ! "$1" ] && echo "Lesson directory name is required" && exit
+LESSON_PATH="lessons/$1"
+[ -d "$LESSON_PATH" ] && echo "Lesson already exists" && exit
+mkdir -p "$LESSON_PATH"
+vim "$LESSON_PATH/en.txt"

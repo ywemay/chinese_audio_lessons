@@ -1,0 +1,44 @@
+[00:00.00]I like electronics.
+[00:01.00]I like transistors.
+[00:02.00] I like resistors,
+[00:04.00] capacitors,
+[00:05.00] diodes,
+[00:05.00] coils,
+[00:06.00] switches,
+[00:07.00] microcircuits.
+[00:08.00]Resistors are used to limit the electric current flow.
+[00:12.00]Capacitors are used to store electric charge.
+[00:16.00] Capacitors can be used to filter current fluctuations.
+[00:20.00]Capacitors can be electrolitic with positive and negative wire.
+[00:25.00]Capacitors can be of ceramic type.
+[00:27.00]Diodes limit the current flow to one direction only.
+[00:31.00]Diodes can be used to form a diode bridge.
+[00:35.00]Diode bridge is used to transform alternating current into direct current.
+[00:40.00] Diodes have 2 legs,
+[00:42.00] 2 pins.
+[00:43.00]Tranzistors and diodes are made of the similar material.
+[00:47.00] Transistors have 3 pins:
+[00:49.00] base,
+[00:49.00] collector,
+[00:50.00] emittor.
+[00:51.00] Transistors are the basic components of today's electronics.
+[00:56.00] Transistors work by amplifying the current.
+[00:59.00]Microcircuits or microcontrollers are complex electronic parts containing microscopic parts.
+[01:06.00] In their circuit can be found lots of tranzistors,
+[01:10.00] rezistors,
+[01:11.00] capacitors,
+[01:12.00] diodes.
+[01:13.00]Transformers are used to change the voltage of an alternative current circuit.
+[01:19.00] For example:
+[01:20.00] from 220 volt to 5 volt.
+[01:22.00] Transformer usually has 2 coils.
+[01:24.00] Each coil has different number of windings.
+[01:28.00] Each coil may have different type of wire thickness.
+[01:32.00]Light emitting diodes come in different colors:
+[01:35.00] red,
+[01:36.00] green,
+[01:36.00] yellow,
+[01:37.00] blue,
+[01:37.00] white.
+[01:38.00] Our diplays are based on light emitting diodes.
+[01:42.00] If you look under the microscope at the computer monitor surface - you can see individual light emitting diodes.
